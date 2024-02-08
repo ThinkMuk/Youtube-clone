@@ -1,14 +1,15 @@
 import React from "react";
+import { formatAgo } from "../util/date";
 
 export default function VideoCard({ video }) {
-  const { title, thumbnails, channelTitle, publishedAt } = video.snippet;
+  const { title, etag, thumbnails, channelTitle, publishedAt } = video.snippet;
   return (
-    <li>
+    <li key={etag}>
       <img src={thumbnails.medium.url} alt={title} />
       <div>
         <p>{title}</p>
         <p>{channelTitle}</p>
-        <p>{publishedAt}</p>
+        <p>{formatAgo(publishedAt, "ko")}</p>
       </div>
     </li>
   );
