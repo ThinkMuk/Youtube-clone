@@ -22,13 +22,13 @@ export default function SearchHeader() {
       </Link>
       <form className="w-full flex justify-center" onSubmit={handleSubmit}>
         <input
-          className="w-7/12 p-2 outline-none bg-black text-gray-50"
+          className="w-7/12 p-2 outline-none bg-black text-lg text-gray-50 rounded-l-lg"
           type="text"
           placeholder="Search..."
           value={text}
           onChange={(e) => setText(e.target.value)}
         />
-        <button className="bg-zinc-600 px-4">
+        <button className="bg-zinc-600 hover:bg-zinc-700 px-4 text-lg rounded-r-lg">
           <BsSearch />
         </button>
       </form>
