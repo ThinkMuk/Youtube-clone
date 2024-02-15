@@ -15,8 +15,8 @@ export default function VideoDetail() {
           title={video.id}
           id="player"
           type="text/html"
-          width="640"
-          height="390"
+          width="80%"
+          height="640"
           src={`http://www.youtube.com/embed/${video.id}`}
         />
         <div>
