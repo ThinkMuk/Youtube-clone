@@ -13,6 +13,19 @@ export default class Youtube {
       .then((res) => res.data.items[0].snippet.thumbnails.default.url);
   }
 
+  async channelDescription(channelId) {
+    //영상 설명란을 불러오기 위한 api
+    return this.apiClient
+      .videos({
+        params: {
+          part: "snippet",
+          id: channelId,
+          maxResults: 1,
+        },
+      })
+      .then((res) => res.data.items[0].snippet.description);
+  }
+
   async relatedVideos(id) {
     return this.apiClient
       .search({
