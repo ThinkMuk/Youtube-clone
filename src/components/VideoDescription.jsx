@@ -18,11 +18,7 @@ export default function VideoDescription({ id }) {
     <>
       {isLoading && <p>Loading...</p>}
       {error && <p>Something is wrong</p>}
-      {description && (
-        <pre className="p-4 bg-zinc-800 rounded-lg whitespace-pre-wrap text-base">
-          {description}
-        </pre>
-      )}
+      {description && <pre className="whitespace-pre-wrap">{description}</pre>}
     </>
   );
 }
