@@ -14,14 +14,14 @@ export default function VideoCard({ video, type }) {
       }}
     >
       <img
-        className={isList ? "w-60 mr-2 rounded-lg" : "w-full rounded-lg"}
+        className={isList ? "w-48 mr-2 rounded-lg" : "w-full rounded-lg"}
         src={thumbnails.medium.url}
         alt={title}
       />
       <div>
-        <p className="font-semibold my-2 line-clamp-2">{title}</p>
-        <p className="text-sm opacity-80">{channelTitle}</p>
-        <p className="text-sm opacity-80">{formatAgo(publishedAt, "ko")}</p>
+        <p className={"font-semibold my-2 line-clamp-2"}>{title}</p>
+        <p className={"text-sm opacity-80"}>{channelTitle}</p>
+        <p className={"text-sm opacity-80"}>{formatAgo(publishedAt, "ko")}</p>
       </div>
     </li>
   );

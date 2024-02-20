@@ -13,6 +13,7 @@ export default function VideoDescription({ id }) {
     queryFn: () => {
       return youtube.channelDescription(id);
     },
+    staleTime: 1000 * 60 * 5,
   });
   return (
     <>
