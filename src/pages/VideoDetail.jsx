@@ -15,7 +15,7 @@ export default function VideoDetail() {
   }
   return (
     <section className="flex flex-col lg:flex-row">
-      <article className="basis-4/6">
+      <article className="basis-9/12">
         <iframe
           className="rounded-lg"
           title={title}
@@ -42,7 +42,7 @@ export default function VideoDetail() {
           </button>
         </div>
       </article>
-      <section className="basis-2/6">
+      <section className="basis-3/12">
         <RelatedVideos id={channelId} />
       </section>
     </section>
